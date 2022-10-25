@@ -39,7 +39,9 @@ extern crate core;
 #[macro_use]
 mod macros;
 
+#[cfg(not(target_arch = "m68k"))]
 pub mod float;
+#[cfg(not(target_arch = "m68k"))]
 pub mod int;
 
 #[cfg(any(
